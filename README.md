@@ -1,16 +1,59 @@
-# React + Vite
+# 🌊 FlowSense: AI-Driven Traffic Prediction Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlowSense is a premium, high-performance web dashboard that leverages Google Gemini AI to predict real-time traffic bottlenecks and provide dynamic routing solutions. Built with a sleek dark-themed aesthetic and glassmorphism, it transforms raw data into actionable commuting intelligence.
 
-Currently, two official plugins are available:
+![FlowSense Demo](https://raw.githubusercontent.com/ahmadusman10/flowsense/main/public/demo-screenshot.png) (Add your own screenshot here!)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **AI Predictive Engine**: Integrates with Google Cloud Functions and Gemini AI to analyze traffic patterns and identify high-severity bottlenecks on-the-fly.
+- **Dynamic Map Visualization**: Powered by `@vis.gl/react-google-maps`, featuring interactive pulsing markers for traffic hotspots and precision info-windows.
+- **Electric Cyan Routing**: Real-time directional travel paths drawn with custom styled polyline vectors to ensure maximum visibility.
+- **Premium UX**: Fully responsive glassmorphism UI built with Tailwind CSS v4, featuring micro-animations and loading states.
+- **Context-Aware Analytics**: AI-generated traffic reasons explaining *why* a bottleneck is occurring (stadium surges, metro maintenance, weather impacts, etc.).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Maps**: [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
+- **AI Backend**: [Google Cloud Functions](https://cloud.google.com/functions) + [Google Gemini API](https://ai.google.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ahmadusman10/flowsense.git
+   cd flowsense
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**:
+   Create a `.env` file in the root directory and add your Google Maps API Key:
+   ```env
+   VITE_GOOGLE_MAPS_API_KEY=YOUR_API_KEY_HERE
+   ```
+
+4. **Run in Development**:
+   ```bash
+   npm run dev
+   ```
+
+## 🧠 Behind the Scenes: The AI Handshake
+
+FlowSense uses a three-way architectural handshake:
+1. **Frontend**: Captures user input and broadcasts a secure POST request to a Google Cloud Function.
+2. **Cloud Function**: Pipes the trip data to **Gemini 1.5 Flash** with strict temperature controls for factual accuracy. 
+3. **Synthesis**: The JSON response is parsed by our `MapLayout` component, triggering a cinematic `panTo()` camera movement and rendering the red pulsing bottleneck markers.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+Developed with ❤️ by [Ahmad Usman](https://github.com/ahmadusman10)
