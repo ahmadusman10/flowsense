@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #00e5ff;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased overflow-hidden m-0 p-0;
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 shadow-2xl rounded-2xl;
+}
+.glass-input {
+  @apply w-full bg-slate-800/50 border border-slate-600/50 rounded-lg px-4 py-3 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all duration-300;
+}
+.primary-button {
+  @apply w-full bg-accent hover:bg-cyan-400 text-slate-950 font-bold py-3 px-4 rounded-lg transition-all duration-300 active:scale-[0.98];
+  box-shadow: 0 0 15px rgba(0,229,255,0.4);
+}
+.primary-button:hover {
+  box-shadow: 0 0 25px rgba(0,229,255,0.6);
+}
