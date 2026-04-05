@@ -2,8 +2,6 @@
 
 FlowSense is a premium, high-performance web dashboard that leverages Google Gemini AI to predict real-time traffic bottlenecks and provide dynamic routing solutions. Built with a sleek dark-themed aesthetic and glassmorphism, it transforms raw data into actionable commuting intelligence.
 
-FlowSense Demo Video:
-https://drive.google.com/file/d/1aon_aWUH4eZqNfXK-UqcaHQOSAYzzlOM/view?usp=drivesdk
 
 ## 🚀 Features
 
